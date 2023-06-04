@@ -1,0 +1,10 @@
+
+<ion-item button detail="true" *ngIf="dog" (click)="clicked()">
+  <ion-avatar *ngIf="dog.profileImage != ''"  slot="start">
+    <img alt="No Image" [src]="dog.profileImage" />
+  </ion-avatar>
+  <ion-avatar *ngIf="dog.profileImage == ''" slot="start">
+    <img alt="No Image" src="../../assets/dog-silhouette.jpg" />
+  </ion-avatar>
+  <ion-label>{{dog.name}}</ion-label>
+</ion-item>

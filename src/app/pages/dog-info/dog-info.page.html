@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{dog?.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-fab-button class="editButton" (click)="editClicked()">
+      <ion-icon aria-hidden="true" name="pencil"></ion-icon>
+    </ion-fab-button>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <b>Gender: </b>{{dog?.gender}}
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <b>Birthdate: </b>{{dog?.birthDate}}
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <hr style="height:2px; " />
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  
+  <ion-item *ngIf="dog?.gender == 'Female'">
+    <ion-grid >
+      <ion-row>
+        <ion-col><b>Litters</b></ion-col>
+        <ion-col>
+          <ion-button class="addLitter">
+            <ion-icon aria-hidden="true" name="add" ></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+
+</ion-content>

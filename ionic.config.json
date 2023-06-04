@@ -1,0 +1,7 @@
+{
+  "name": "dog-litter-tracker",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
